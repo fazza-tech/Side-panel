@@ -3,7 +3,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Switch } from "@/components/ui/switch";
 import type { BookingData } from "./BookingDetailsView";
 
 interface BookingEditFormProps {
@@ -120,12 +119,7 @@ export function BookingEditForm({ booking, onSave, onCancel }: BookingEditFormPr
               <Label htmlFor="taxPercent" className="text-xs">Tax %</Label>
               <Input id="taxPercent" type="number" min={0} className="h-8 text-sm" value={form.taxPercent} onChange={(e) => update("taxPercent", Number(e.target.value))} />
             </div>
-            <div className="flex items-end pb-0.5">
-              <div className="flex items-center gap-2">
-                <Switch id="splitBooking" checked={form.splitBooking} onCheckedChange={(v) => update("splitBooking", v)} />
-                <Label htmlFor="splitBooking" className="text-xs">Split Booking</Label>
-              </div>
-            </div>
+            <div />
           </div>
         </div>
       </div>
